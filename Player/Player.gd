@@ -26,8 +26,8 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		$Pivot.rotate_x(-event.relative.y * mouse_sensitivity)
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		$Pivot.roatation.x = clamp($Pivot.rotation.x, -mouse_range, mouse_range)
-		
+		$Pivot.rotation.x = clamp($Pivot.rotation.x, -mouse_range, mouse_range)
+
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
